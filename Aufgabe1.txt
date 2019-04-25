@@ -1,0 +1,14 @@
+LDA 01;		//01 -> n
+ADD 02;		//02 = 1
+STA 01;
+LDA 03;		//03 -> i; Lade i in Akku
+MUL 03;		//multipliziere Akku mit i
+ADD 04;		//04 -> Summe
+STA 04;		//addiere Akkuinhalt auf s und speicher in s
+LDA 03;		//erhoehe i um 1
+ADD 02;
+STA 03;
+SUB 01;		//Vergleiche i und n
+JNE 04;		//Falls nicht gleich springe zurueck
+OUT 04;		//gib s aus
+HLT 99;
